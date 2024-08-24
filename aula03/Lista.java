@@ -52,8 +52,8 @@ class Lista<T> {
                 auxUltimo = auxUltimo.getAux();
             }
             System.out.printf("Dado: {%s} foi removido da lista", ultimoNo.getDado());
-            auxUltimo.setAux(null);
             ultimoNo = auxUltimo;
+            ultimoNo.setAux(null);
         }
 
     }
