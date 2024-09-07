@@ -1,43 +1,51 @@
-
-
- class NoDuplo<T> {
+// Classe NoDuplo que representa um nó da lista duplamente encadeada
+public class NoDuplo<T> {
     private T dado;
-    private NoDuplo<T> anteriorNo;
     private NoDuplo<T> proximoNo;
+    private NoDuplo<T> anteriorNo;
+    private int indice;
 
-    public NoDuplo(T dado){
+    public NoDuplo(T dado, int indice) {
         this.dado = dado;
-        this.anteriorNo = null;
+        this.indice = indice;
         this.proximoNo = null;
+        this.anteriorNo = null;
     }
 
-    public T getDado(){
-        return this.dado;
+    public T getDado() {
+        return dado;
     }
 
-    public NoDuplo<T> getProximoNo(){
-        return this.proximoNo;
+    public int getIndice(){
+        return indice;
     }
 
-    public NoDuplo<T> getAnteriorNo(){
-        return this.anteriorNo;
-    }
-
-    public void setDado(T dado){
+    public void setDado(T dado) {
         this.dado = dado;
     }
 
-    public void setProximoNo(NoDuplo<T> proximoNo){
+    public void setIndice(int indice){
+        this.indice = indice;
+    }
+
+    public NoDuplo<T> getProximoNo() {
+        return proximoNo;
+    }
+
+    public void setProximoNo(NoDuplo<T> proximoNo) {
         this.proximoNo = proximoNo;
     }
 
-    public void setAnteriorNo(NoDuplo<T> anteriorNo){
+    public NoDuplo<T> getAnteriorNo() {
+        return anteriorNo;
+    }
+
+    public void setAnteriorNo(NoDuplo<T> anteriorNo) {
         this.anteriorNo = anteriorNo;
     }
 
-    
     @Override
     public String toString(){
-        return "{" + getDado() + "}";
+        return "{ " + "Indice: " + getIndice() + ", Dado: " + getDado() + " }";
     }
 }
